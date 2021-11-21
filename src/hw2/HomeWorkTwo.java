@@ -5,6 +5,7 @@ public class HomeWorkTwo {
         from10to20(1,13);
         minusOrPluse(-10);
         fullOrNot(5);
+        loop(1, "*****");
     }
     public static void from10to20(int a, int b){
         int sum = (a+b);
@@ -31,6 +32,12 @@ public class HomeWorkTwo {
             System.out.println("False");
         }
         return a;
+    }
+
+    public static void loop(int a, String b) {
+        for (int i = 0; i <5 ; i++) {
+            System.out.println(b);
+        }
     }
 }
 
