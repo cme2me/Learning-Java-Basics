@@ -40,17 +40,6 @@ public class HomeWorkTwo {
         }
     }
 
-    public static boolean year(int a){
-        int b = 0;
-        do {
-            System.out.println(true);
-        }
-        while (a);
-
-        for (int i = 0; i <4; i+b) { //не смог сделать 5 задание
-
-        }
-    }
 
 }
 
