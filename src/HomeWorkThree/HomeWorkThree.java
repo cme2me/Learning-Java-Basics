@@ -40,6 +40,14 @@ public class HomeWorkThree {
         }
         return arr4;
     }
+    public static int[] arr5(int len, int initalValue){
+        int[] arr = new int[len];
+        Arrays.fill(arr, initalValue);
+        for (int i = 0; i < arr.length; i++) { // Не уходит предупреждение даже после добавления Arrays.fill()
+            arr[i] = initalValue;
+        }
+        return arr;
+    }
     public static int maxValue(int[] arr6){
         int max = arr6[0];
         for (int i = 0; i < arr6.length; i++) {
