@@ -22,6 +22,8 @@ public class HomeWorkThree {
 
 
         System.out.println(arrQWE(10)); // 4 задание не смог
+
+
     }
 
     public static int[] first(int[] array) {
@@ -37,5 +39,14 @@ public class HomeWorkThree {
             arr4[i][x - 1 - i] = 1;
         }
         return arr4;
+    }
+    public static int maxValue(int[] arr6){
+        int max = arr6[0];
+        for (int i = 0; i < arr6.length; i++) {
+            if(arr6[i] > max){
+                max = arr6[i];
+            }
+        }
+        return max;
     }
 }
