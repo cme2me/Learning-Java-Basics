@@ -19,6 +19,9 @@ public class HomeWorkThree {
             }
         }
         System.out.println(Arrays.toString(arr3));
+
+
+        System.out.println(arrQWE(10)); // 4 задание не смог
     }
 
     public static int[] first(int[] array) {
@@ -27,5 +30,12 @@ public class HomeWorkThree {
         }
         return array;
     }
-
+    public static int[][] arrQWE(int x){
+        int[][] arr4 = new int[x][x];
+        for (int i = 0; i < x; i++) {
+            arr4[i][i] = 1;
+            arr4[i][x - 1 - i] = 1;
+        }
+        return arr4;
+    }
 }
