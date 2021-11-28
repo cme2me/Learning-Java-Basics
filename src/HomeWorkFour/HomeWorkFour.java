@@ -59,4 +59,22 @@ public class HomeWorkFour {
         }
         return map[y][x] == DOT_EMPTY;
     }
+    public static void aiTurn() {
+        int x, y;
+        do {
+            y = random.nextInt(SIZE);
+            x = random.nextInt(SIZE);
+        } while (!isCellValid(y, x));
+        map[y][x] = DOT_O;
+    }
+    public static boolean isFull() {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if (map[i][j] == DOT_EMPTY) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
