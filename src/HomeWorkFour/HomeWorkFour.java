@@ -18,7 +18,32 @@ public class HomeWorkFour {
 
     public static void main(String[] args) {
 
+        initMap();
+        printMap();
 
+        while (true) {
+            humanTurn();
+            printMap();
+            if (isWin(DOT_X)) {
+                System.out.println("Победа");
+                break;
+            }
+            if (isFull()) {
+                System.out.println("Ничья");
+                break;
+            }
+
+            aiTurn();
+            printMap();
+            if (isWin(DOT_O)) {
+                System.out.println("Поражение");
+                break;
+            }
+            if (isFull()) {
+                System.out.println("Ничья");
+                break;
+            }
+        }
 
 
     }
