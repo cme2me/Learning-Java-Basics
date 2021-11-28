@@ -44,4 +44,19 @@ public class HomeWorkFour {
             System.out.println();
         }
     }
+    public static void humanTurn() {
+        int x, y;
+        do {
+            System.out.println("Введите X,Y");
+            x = sc.nextInt() - 1;
+            y = sc.nextInt() - 1;
+        } while (!isCellValid(y, x));
+        map[y][x] = DOT_X;
+    }
+    public static boolean isCellValid(int y, int x) {
+        if (y < 0 || x < 0 || y >= SIZE || x >= SIZE) {
+            return false;
+        }
+        return map[y][x] == DOT_EMPTY;
+    }
 }
