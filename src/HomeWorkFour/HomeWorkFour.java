@@ -77,4 +77,34 @@ public class HomeWorkFour {
         }
         return true;
     }
+    public static boolean isWin(char c) {
+        if (map[0][0] == c && map[0][1] == c && map[0][2] == c) {
+            return true;
+        }
+        else if (map[1][0] == c && map[1][1] == c && map[1][2] == c) {
+            return true;
+        }
+        else if (map[2][0] == c && map[2][1] == c && map[2][2] == c) {
+            return true;
+        }
+
+        else if (map[0][0] == c && map[1][0] == c && map[2][0] == c) {
+            return true;
+        }
+        else if (map[0][1] == c && map[1][1] == c && map[2][1] == c) {
+            return true;
+        }
+        else if (map[0][2] == c && map[1][2] == c && map[2][2] == c) {
+            return true;
+        }
+
+        else if (map[0][0] == c && map[1][1] == c && map[2][2] == c) {
+            return true;
+        }
+        else if (map[0][2] == c && map[1][1] == c && map[2][0] == c) {
+            return true;
+        }
+
+        return false;
+    }
 }
