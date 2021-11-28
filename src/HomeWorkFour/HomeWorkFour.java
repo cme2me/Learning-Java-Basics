@@ -47,7 +47,8 @@ public class HomeWorkFour {
 
 
     }
-    public static void initMap () {
+
+    public static void initMap() {
         map = new char[SIZE][SIZE];
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
@@ -55,6 +56,7 @@ public class HomeWorkFour {
             }
         }
     }
+
     public static void printMap() {
         System.out.print("  ");
         for (int i = 1; i <= SIZE; i++) {
@@ -69,6 +71,7 @@ public class HomeWorkFour {
             System.out.println();
         }
     }
+
     public static void humanTurn() {
         int x, y;
         do {
@@ -78,12 +81,14 @@ public class HomeWorkFour {
         } while (!isCellValid(y, x));
         map[y][x] = DOT_X;
     }
+
     public static boolean isCellValid(int y, int x) {
         if (y < 0 || x < 0 || y >= SIZE || x >= SIZE) {
             return false;
         }
         return map[y][x] == DOT_EMPTY;
     }
+
     public static void aiTurn() {
         int x, y;
         do {
@@ -92,6 +97,7 @@ public class HomeWorkFour {
         } while (!isCellValid(y, x));
         map[y][x] = DOT_O;
     }
+
     public static boolean isFull() {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
@@ -102,34 +108,19 @@ public class HomeWorkFour {
         }
         return true;
     }
+
     public static boolean isWin(char c) {
-        if (map[0][0] == c && map[0][1] == c && map[0][2] == c) {
-            return true;
-        }
-        else if (map[1][0] == c && map[1][1] == c && map[1][2] == c) {
-            return true;
-        }
-        else if (map[2][0] == c && map[2][1] == c && map[2][2] == c) {
-            return true;
-        }
+        for (int i = 0; i < 3; i++) {
+            if (map[i][0] == c && map[i][1] == c && map[i][2] == c) {
+                return true;
+            } else if (map[0][i] == c && map[1][i] == c && map[2][i] == c) {
+                return true;
+            }
+            if ((map[0][0] == c && map[1][1] == c && map[2][2] == c) || (map[2][0] == c && map[1][1] == c && map[0][2] == c)){
+                return true;
+            }
 
-        else if (map[0][0] == c && map[1][0] == c && map[2][0] == c) {
-            return true;
         }
-        else if (map[0][1] == c && map[1][1] == c && map[2][1] == c) {
-            return true;
-        }
-        else if (map[0][2] == c && map[1][2] == c && map[2][2] == c) {
-            return true;
-        }
-
-        else if (map[0][0] == c && map[1][1] == c && map[2][2] == c) {
-            return true;
-        }
-        else if (map[0][2] == c && map[1][1] == c && map[2][0] == c) {
-            return true;
-        }
-
         return false;
     }
 }
