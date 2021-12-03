@@ -17,4 +17,12 @@ public class Employee {
         this.salary = salary;
         this.age = age;
     }
+
+    public void printFullInfo(){
+        System.out.println("FIO" + name + "position" + position + "email" + email + "salary" + salary + "age" + age);
+    }
+
+    int getAge(){
+        return age;
+    }
 }
