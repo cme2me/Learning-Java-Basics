@@ -7,5 +7,5 @@ public class Employee {
 
     private int salary;
     private int phone;
-    private int age;
+    private int age ;
 }
