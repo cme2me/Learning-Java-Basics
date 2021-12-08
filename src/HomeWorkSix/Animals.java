@@ -13,4 +13,21 @@ public class Animals {
         this.maxRun = maxRun;
         this.maxSwim = maxSwim;
     }
+
+    public void run(int distantion){
+        if(maxRun == 0){
+            System.out.printf("%s %s не умеет бегать\n", type, name);
+            return;
+        }
+        else if(distantion < 0 ){
+            System.out.println("Для бега в обратном направлении введите то же число");
+            return;
+        }
+        else if(distantion <= maxRun){
+            System.out.printf("%s %s пробежал %d метров\n", type, name, distantion);
+        }
+        else{
+            System.out.printf("%s %s не смог пробежать %d метров\n", type, name, distantion);
+        }
+    }
 }
