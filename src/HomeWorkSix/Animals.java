@@ -33,7 +33,7 @@ public class Animals {
 
     public void swim(int distantion){
         if(maxSwim == 0 ){
-            System.out.printf("%s %s не умеет бегать\n", type, name);
+            System.out.printf("%s %s не умеет плавать\n", type, name);
             return;
         }
         else if(distantion < 0 ){
