@@ -48,7 +48,7 @@ public class Main {
                 new Cat("Barsik5")
         };
 
-
+        Plate plate = new Plate(33);
 
         for (int i = 0; i < cats.length; i++) {
             cats[i].eat(plate);
