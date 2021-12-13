@@ -5,7 +5,8 @@ public class Main {
         Cat[] cats = new Cat[]{
                 new Cat("Papich"),
                 new Cat("Venik"),
-                new Cat("Filtr")
+                new Cat("Filtr"),
+                new Cat("Stepa")
         };
 
         Plate plate = new Plate(25);

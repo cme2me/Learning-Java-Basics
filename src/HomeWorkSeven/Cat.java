@@ -12,12 +12,12 @@ public class Cat {
 
     public boolean eat(Plate plate){
         if(plate.decreaseFood(DEFAULT_APPETITE)){
-            System.out.println("Cat" + name + "eating");
+            System.out.println("Cat" + name + "is eating");
             fullStomach = true;
             return true;
         }
         else{
-            System.out.println("Cat" + name + "still hungry");
+            System.out.println("Cat" + name + "is still hungry");
             return false;
         }
     }
