@@ -20,7 +20,7 @@ public class BattleField extends JPanel {
 
     public BattleField(GameWindow gameWindow) {
         this.gameWindow = gameWindow;
-        setBackground(Color.ORANGE);
+        setBackground(Color.LIGHT_GRAY);
 
 
         addMouseListener(new MouseAdapter() {
@@ -91,6 +91,7 @@ public class BattleField extends JPanel {
         g.drawLine(cellX * cellWidth, cellY * cellHeight,
                 cellX * cellWidth + cellWidth, cellY * cellHeight + cellHeight);
 
-        
+        g.drawLine((cellX + 1) * cellWidth, (cellY * cellHeight), cellX * cellWidth, (cellY + 1) *cellWidth);
     }
+
 }
