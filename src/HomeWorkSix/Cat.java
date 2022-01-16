@@ -2,7 +2,7 @@ package HomeWorkSix;
 
 public class Cat extends Animals{
     public Cat(String name){
-        super(name,"Кошка", 200, 0);
+        super(name,"Кот", 200, 0);
     }
 
 }
